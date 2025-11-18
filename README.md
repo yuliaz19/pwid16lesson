@@ -14,7 +14,9 @@ run tests, and work with environment variables.
    npm install --save-dev prettier
 4. Add to Configuration:
    APP_URL=https://fe-delivery.tallinn-learning.ee/signin
-   (for GitHub use SECRETS)
+   (for GitHub use SECRETS and add the following to workflow file:
+   env:
+   APP_URL: ${{ secrets.APP_URL }} )
 5. Format tests with Prettier if necessary:
    npx prettier --write .npx prettier --write .
 6. Run tests:
