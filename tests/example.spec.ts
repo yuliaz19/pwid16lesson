@@ -14,7 +14,7 @@ test("try to signin with login and password", async ({ page }) => {
 test("not enable signin for short password", async ({ page }) => {
   await page.goto(process.env.APP_URL);
   const randomUsername = faker.internet.username();
-  const randomPassword = faker.internet.password().slice(0, 6);
+  const randomPassword = faker.internet.password().slice(0, 5);
   // const randomPassword = faker.string.alphanumeric(7);
   await page.getByTestId("username-input").fill(randomUsername);
   await page.getByTestId("password-input").fill(randomPassword);
